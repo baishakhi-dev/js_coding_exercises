@@ -28,14 +28,21 @@ function getSalePrice(originalPrice, reduction) {
   // Multiply the discount % to the original price
   var amountSaved = originalPrice * (reduction /100);
   var salePrice = originalPrice - amountSaved;
-  console.log(salePrice);
   return Number(salePrice.toFixed(2));
 
 }
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
-  // Add your code here!
+  let mid;//declare mid character as mid
+  //The string is of even length
+  if(str.length%2 === 0){
+	  mid = str.substring(str.length/2-1,str.length/2+1);
+  }
+  else{//The string is of odd length
+	  mid = str.substring(str.length/2,str.length/2+1);
+  }
+  return mid;
 }
 
 function reverseWord(word) {
