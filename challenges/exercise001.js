@@ -82,7 +82,13 @@ function reverseAllWords(words) {
 
 function countLinuxUsers(users) {
   if (users === undefined) throw new Error("users is required");
-  // Add your code here!
+  
+  var count = users.filter(function (key)
+  {
+    return key.type === "Linux";
+  }
+  );
+  return count.length;
 }
 
 function getMeanScore(scores) {
