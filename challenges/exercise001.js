@@ -53,13 +53,31 @@ function reverseWord(word) {
   var reverseWords = letters.reverse();
   //join the reversed words
   var result = reverseWords.join("");
-  console.log(result);
+  
   return result;
 }
 
 function reverseAllWords(words) {
   if (words === undefined) throw new Error("words is required");
-  // Add your code here!
+  //declare the variables
+  let reverseWords = [];
+  let letters;
+  let revWords;
+  let result;
+  for(var i =0;i < words.length;i++){
+    //Split the words into letters
+    letters = words[i].split("");
+    //reverse the letters 
+    revWords = letters.reverse();
+    //join the reversed letters
+    result = revWords.join("");
+    //push into the reverse array
+    reverseWords.push(result);
+
+  }
+  return reverseWords;
+  
+
 }
 
 function countLinuxUsers(users) {
